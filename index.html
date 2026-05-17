@@ -12,6 +12,12 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     background: #f3f5f4;
     color: #222;
+    animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 /* HEADER */
@@ -22,34 +28,18 @@ body {
     padding: 80px 20px 100px 20px;
 }
 
-.header h1 {
-    font-size: 36px;
-    margin: 0;
-}
-
-.header p {
-    margin-top: 10px;
-    font-size: 18px;
-}
-
-/* APP MOCKUP */
+/* PHONE */
 .phone {
     width: 260px;
     margin: -80px auto 20px auto;
     border-radius: 30px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    background: black;
-}
-
-.phone img {
-    width: 100%;
-    display: block;
 }
 
 /* CONTAINER */
 .container {
-    max-width: 500px;
+    max-width: 520px;
     margin: auto;
     padding: 20px;
 }
@@ -61,6 +51,11 @@ body {
     margin-bottom: 12px;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
 }
 
 /* BUTTON */
@@ -72,23 +67,31 @@ body {
     margin-top: 12px;
     font-weight: bold;
     text-decoration: none;
+    transition: 0.2s;
 }
 
-/* DOWNLOAD */
+.button:hover {
+    transform: scale(1.03);
+}
+
+/* BUTTON COLORS */
 .download {
     background: #2e7d32;
     color: white;
 }
 
-/* PAYPAL */
 .paypal {
     background: #ffca28;
     color: black;
 }
 
-/* SECTION TITLE */
-h3 {
-    margin-top: 30px;
+/* SPENDEN */
+.support-box {
+    background: #fff3cd;
+    border-radius: 16px;
+    padding: 18px;
+    margin-top: 20px;
+    text-align: center;
 }
 
 /* FOOTER */
@@ -100,51 +103,78 @@ h3 {
     padding-bottom: 20px;
 }
 </style>
-
 </head>
 
 <body>
 
-<!-- HEADER -->
 <div class="header">
     <h1>📡 SchützenRadar</h1>
-    <p>Finde Schützenfeste in deiner Nähe 🎉</p>
+    <p>Alle Schützenfeste im Kreis in einer App 🎉</p>
 </div>
 
-<!-- APP MOCKUP -->
-<div class="phone">
-    <img src="https://via.placeholder.com/300x600.png?text=App+Screenshot" />
-</div>
 
-<!-- CONTENT -->
 <div class="container">
 
-    <div class="card">📍 Events in deiner Nähe</div>
-    <div class="card">⭐ Favoriten speichern</div>
-    <div class="card">🚕 Taxi sofort finden</div>
+<!-- FEATURES -->
+<div class="card">📅 Alle Termine im Überblick</div>
+<div class="card">🔍 Suche & Filter nach Ort, Monat & Favoriten</div>
+<div class="card">📍 Detailinfos + Navigation</div>
+<div class="card">⭐ Favoriten speichern</div>
+<div class="card">📰 News & Updates</div>
 
-    <!-- DOWNLOAD BUTTON -->
-    <a href="DEIN_APPSTORE_LINK" class="button download">
-        📲 App herunterladen
-    </a>
+<!-- HIGHLIGHT -->
+<div class="card">
+    🔥 <strong>Live-Adlerschießen verfolgen</strong><br><br>
+    🦅 Teilnehmerübersicht<br>
+    🎯 Schusszähler<br>
+    ⏱️ Trefferzeiten<br><br>
+    👉 Live und in Echtzeit
+</div>
 
-    <!-- PAYPAL -->
+<!-- DOWNLOAD -->
+<a href="https://apps.apple.com/de/app/sch%C3%BCtzenradar/id6768100350" class="button download">
+📲 App herunterladen
+</a>
+
+<!-- SUPPORT -->
+<div class="support-box">
+    <h3>💛 Unterstütze das Projekt</h3>
+    <p>
+        Wenn dir die App gefällt und du mich unterstützen möchtest,<br>
+        dann gib mir doch einfach ein Bier aus 🍺
+    </p>
+    <p><strong>Vielen Dank für deinen Support!</strong></p>
+
     <a href="https://paypal.me/SaschaLanghorst" target="_blank" class="button paypal">
         💛 Unterstützen
     </a>
+</div>
 
-    <!-- INFO -->
-    <h3>📢 Für Vereine</h3>
-    <div class="card">
-        Dein Schützenfest fehlt?<br><br>
-        Wir tragen es kostenlos ein!
-    </div>
+<!-- PROBLEM & LÖSUNG -->
+<div class="card">
+    💡 <strong>Warum diese App?</strong><br><br>
 
+    Alle Schützenfeste waren verstreut – jetzt hast du alles an einem Ort.<br><br>
+
+    ✅ Kein Suchen mehr in WhatsApp<br>
+    ✅ Keine verpassten Termine<br>
+    ✅ Alles sofort verfügbar
+</div>
+
+<!-- ZIELGRUPPE -->
+<div class="card">
+    🎉 Für wen ist die App?<br><br>
+
+    Besucher von Schützenfesten<br>
+    Vereine & Teilnehmer<br>
+    Freunde & Familien
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
     © 2026 SchützenRadar
+</div>
+
 </div>
 
 </body>
