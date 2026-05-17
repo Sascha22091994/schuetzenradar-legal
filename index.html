@@ -19,24 +19,19 @@ body {
     background: linear-gradient(135deg, #1b5e20, #43a047);
     color: white;
     text-align: center;
-    padding: 30px 20px 40px;
+    padding: 30px 20px;
 }
 
 .header h1 {
     margin: 0;
-    font-size: 28px;
-}
-
-.header p {
-    margin: 5px 0 0;
-    font-size: 15px;
+    font-size: 26px;
 }
 
 /* MAIN */
 .container {
     max-width: 900px;
-    margin: -20px auto 0;
-    padding: 15px;
+    margin: 20px auto;
+    padding: 10px;
 }
 
 /* GRID */
@@ -44,6 +39,13 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* CARD */
@@ -60,16 +62,28 @@ body {
     grid-column: span 2;
 }
 
+@media (max-width: 600px) {
+    .highlight {
+        grid-column: span 1;
+    }
+}
+
 /* BUTTON */
 .button {
     display: inline-block;
     padding: 12px 18px;
-    border-radius: 20px;
+    border-radius: 25px;
     font-weight: bold;
     text-decoration: none;
-    margin-top: 10px;
+    margin: 8px;
+    transition: 0.2s;
 }
 
+.button:hover {
+    transform: scale(1.05);
+}
+
+/* COLORS */
 .download {
     background: #2e7d32;
     color: white;
@@ -80,7 +94,7 @@ body {
     color: black;
 }
 
-/* ACTION AREA */
+/* ACTION */
 .actions {
     text-align: center;
     margin-top: 15px;
@@ -91,7 +105,7 @@ body {
     background: #fff3cd;
     padding: 12px;
     border-radius: 12px;
-    margin-top: 15px;
+    margin-top: 10px;
     text-align: center;
     font-size: 14px;
 }
@@ -115,7 +129,7 @@ body {
 
 <div class="container">
 
-<!-- FEATURES GRID -->
+<!-- FEATURES -->
 <div class="grid">
 
     <div class="card">📅 Termine im Überblick</div>
@@ -138,19 +152,19 @@ body {
 <!-- BUTTONS -->
 <div class="actions">
 
-<a href="https://apps.apple.com/de/app/sch%C3%BCtzenradar/id6768100350" class="button download">
-    📲 App herunterladen
-</a>
+    <a href="https://apps.apple.com/de/app/sch%C3%BCtzenradar/id6768100350" class="button download">
+        📲 App herunterladen
+    </a>
 
-<a href="https://paypal.me/SaschaLanghorst" target="_blank" class="button paypal">
-    🍺 Bier ausgeben
-</a>
+    <a href="https://paypal.me/SaschaLanghorst" class="button paypal" target="_blank">
+        🍺 Bier ausgeben
+    </a>
 
 </div>
 
 <!-- SUPPORT TEXT -->
 <div class="support">
-    Wenn dir die App gefällt, unterstütze die Entwicklung und<br>
+    Wenn dir die App gefällt und du mich unterstützen möchtest,<br>
     gib mir einfach ein Bier aus 🍺
 </div>
 
