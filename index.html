@@ -9,15 +9,9 @@
 <style>
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: -apple-system, sans-serif;
     background: #f3f5f4;
     color: #222;
-    animation: fadeIn 0.8s ease;
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
 }
 
 /* HEADER */
@@ -25,56 +19,57 @@ body {
     background: linear-gradient(135deg, #1b5e20, #43a047);
     color: white;
     text-align: center;
-    padding: 40px 20px 50px 20px;
+    padding: 30px 20px 40px;
 }
 
-/* PHONE */
-.phone {
-    width: 260px;
-    margin: -60px auto 20px auto;
-    border-radius: 30px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+.header h1 {
+    margin: 0;
+    font-size: 28px;
 }
 
-/* CONTAINER */
+.header p {
+    margin: 5px 0 0;
+    font-size: 15px;
+}
+
+/* MAIN */
 .container {
-    max-width: 520px;
-    margin: auto;
-    padding: 20px;
+    max-width: 900px;
+    margin: -20px auto 0;
+    padding: 15px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
 /* CARD */
 .card {
     background: white;
-    padding: 16px;
-    margin-bottom: 12px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: 0.2s;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
 }
 
-.card:hover {
-    transform: translateY(-3px);
+/* HIGHLIGHT */
+.highlight {
+    grid-column: span 2;
 }
 
 /* BUTTON */
 .button {
-    display: block;
-    text-align: center;
-    padding: 14px;
-    border-radius: 25px;
-    margin-top: 12px;
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 20px;
     font-weight: bold;
     text-decoration: none;
-    transition: 0.2s;
+    margin-top: 10px;
 }
 
-.button:hover {
-    transform: scale(1.03);
-}
-
-/* BUTTON COLORS */
 .download {
     background: #2e7d32;
     color: white;
@@ -85,24 +80,30 @@ body {
     color: black;
 }
 
-/* SPENDEN */
-.support-box {
-    background: #fff3cd;
-    border-radius: 16px;
-    padding: 18px;
-    margin-top: 20px;
+/* ACTION AREA */
+.actions {
     text-align: center;
+    margin-top: 15px;
+}
+
+/* SUPPORT */
+.support {
+    background: #fff3cd;
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
 }
 
 /* FOOTER */
 .footer {
     text-align: center;
-    margin-top: 40px;
-    font-size: 13px;
-    color: #666;
-    padding-bottom: 20px;
+    font-size: 12px;
+    margin-top: 15px;
 }
 </style>
+
 </head>
 
 <body>
@@ -112,62 +113,47 @@ body {
     <p>Alle Schützenfeste im Kreis in einer App 🎉</p>
 </div>
 
-
 <div class="container">
 
-<!-- FEATURES -->
-<div class="card">📅 Alle Termine im Überblick</div>
-<div class="card">🔍 Suche & Filter nach Ort, Monat & Favoriten</div>
-<div class="card">📍 Detailinfos + Navigation</div>
-<div class="card">⭐ Favoriten speichern</div>
-<div class="card">📰 News & Updates</div>
+<!-- FEATURES GRID -->
+<div class="grid">
 
-<!-- HIGHLIGHT -->
-<div class="card">
-    🔥 <strong>Live-Adlerschießen verfolgen</strong><br><br>
-    🦅 Teilnehmerübersicht<br>
-    🎯 Schusszähler<br>
-    ⏱️ Trefferzeiten<br><br>
-    👉 Live und in Echtzeit
+    <div class="card">📅 Termine im Überblick</div>
+    <div class="card">🔍 Suche & Filter</div>
+
+    <div class="card">📍 Navigation & Infos</div>
+    <div class="card">⭐ Favoriten</div>
+
+    <div class="card">📰 News & Updates</div>
+    <div class="card">🚕 Taxi direkt finden</div>
+
+    <div class="card highlight">
+        🔥 <strong>Live-Adlerschießen</strong><br>
+        🦅 Teilnehmer • 🎯 Zähler • ⏱️ Zeiten<br>
+        👉 Echtzeit Live verfolgen
+    </div>
+
 </div>
 
-<!-- DOWNLOAD -->
-<a href="https://apps.apple.com/de/app/sch%C3%BCtzenradar/id6768100350" class="button download">
-📲 App herunterladen
-</a>
+<!-- BUTTONS -->
+<div class="actions">
 
-<!-- SUPPORT -->
-<div class="support-box">
-    <h3>💛 Unterstütze das Projekt</h3>
-    <p>
-        Wenn dir die App gefällt und du mich unterstützen möchtest,<br>
-        dann gib mir doch einfach ein Bier aus 🍺
-    </p>
-    <p><strong>Vielen Dank für deinen Support!</strong></p>
-
-    <a href="https://paypal.me/SaschaLanghorst" target="_blank" class="button paypal">
-        💛 Unterstützen
+    https://apps.apple.com/de/app/sch%C3%BCtzenradar/id6768100350" class="button download">
+        📲 App herunterladen
     </a>
+
+    <br>
+
+    https://paypal.me/SaschaLanghorst" class="button paypal" target="_blank">
+        🍺 Bier ausgeben
+    </a>
+
 </div>
 
-<!-- PROBLEM & LÖSUNG -->
-<div class="card">
-    💡 <strong>Warum diese App?</strong><br><br>
-
-    Alle Schützenfeste waren verstreut – jetzt hast du alles an einem Ort.<br><br>
-
-    ✅ Kein Suchen mehr in WhatsApp<br>
-    ✅ Keine verpassten Termine<br>
-    ✅ Alles sofort verfügbar
-</div>
-
-<!-- ZIELGRUPPE -->
-<div class="card">
-    🎉 Für wen ist die App?<br><br>
-
-    Besucher von Schützenfesten<br>
-    Vereine & Teilnehmer<br>
-    Freunde & Familien
+<!-- SUPPORT TEXT -->
+<div class="support">
+    Wenn dir die App gefällt, unterstütze die Entwicklung und<br>
+    gib mir einfach ein Bier aus 🍺
 </div>
 
 <!-- FOOTER -->
