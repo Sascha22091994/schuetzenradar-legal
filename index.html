@@ -9,66 +9,83 @@
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f6f6f6;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f3f5f4;
     color: #222;
-    text-align: center;
 }
 
+/* HEADER */
 .header {
-    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+    background: linear-gradient(135deg, #1b5e20, #43a047);
     color: white;
+    text-align: center;
     padding: 60px 20px;
 }
 
-h1 {
+.header h1 {
     margin: 0;
     font-size: 32px;
 }
 
-.subtitle {
+.header p {
     margin-top: 10px;
     font-size: 18px;
 }
 
-.section {
-    padding: 30px 20px;
+/* MAIN CONTAINER */
+.container {
+    max-width: 500px;
+    margin: -40px auto 0 auto;
+    padding: 20px;
 }
 
+/* CARD STYLE */
 .card {
     background: white;
-    margin: 10px auto;
-    padding: 15px;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    font-size: 15px;
 }
 
+/* BUTTONS */
 .button {
-    display: inline-block;
-    padding: 12px 20px;
-    margin: 10px;
+    display: block;
+    text-align: center;
+    padding: 14px;
     border-radius: 25px;
-    text-decoration: none;
+    margin-top: 12px;
     font-weight: bold;
+    text-decoration: none;
 }
 
+/* DOWNLOAD BUTTON */
 .download {
     background: #2e7d32;
     color: white;
 }
 
+/* PAYPAL BUTTON */
 .paypal {
-    background: #ffc107;
+    background: #ffca28;
     color: black;
 }
 
+/* INFO SECTION */
+.info {
+    margin-top: 30px;
+    font-size: 15px;
+    text-align: center;
+}
+
+/* FOOTER */
 .footer {
-    margin-top: 50px;
-    padding: 20px;
-    font-size: 14px;
+    margin-top: 40px;
+    text-align: center;
+    font-size: 13px;
     color: #666;
+    padding-bottom: 20px;
 }
 </style>
 
@@ -79,40 +96,32 @@ h1 {
 <!-- HEADER -->
 <div class="header">
     <h1>📡 SchützenRadar</h1>
-    <div class="subtitle">
-        Finde Schützenfeste in deiner Nähe 🎉
-    </div>
+    <p>Finde Schützenfeste in deiner Nähe 🎉</p>
 </div>
 
-<!-- FEATURES -->
-<div class="section">
+<!-- CONTENT -->
+<div class="container">
 
     <div class="card">📍 Events in deiner Nähe</div>
     <div class="card">⭐ Favoriten speichern</div>
     <div class="card">🚕 Taxi direkt finden</div>
 
-</div>
-
-<!-- BUTTONS -->
-<div class="section">
-
+    <!-- DOWNLOAD BUTTON -->
     <a href="https://apps.apple.com/de/app/sch%C3%BCtzenradar/id6768100350" class="button download">
         📲 App herunterladen
     </a>
 
-    <br>
+    <!-- PAYPAL BUTTON -->
+    <a href="https://paypal.me/SaschaLanghorst" target="_blank" class="button paypal">
+        💛 Unterstützen
+    </a>
 
-<a href="https://paypal.me/SaschaLanghorst" target="_blank" class="button paypal">
-    💛 Unterstützen
-</a>
+    <!-- INFO -->
+    <div class="info">
+        <h3>📢 Für Vereine</h3>
+        <p>Dein Schützenfest fehlt? Wir tragen es kostenlos ein!</p>
+    </div>
 
-
-</div>
-
-<!-- INFO -->
-<div class="section">
-    <h3>📢 Für Vereine</h3>
-    <p>Dein Schützenfest fehlt? Wir tragen es kostenlos ein!</p>
 </div>
 
 <!-- FOOTER -->
