@@ -19,12 +19,12 @@ body {
     background: linear-gradient(135deg, #1b5e20, #43a047);
     color: white;
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px 100px 20px;
 }
 
 .header h1 {
+    font-size: 36px;
     margin: 0;
-    font-size: 32px;
 }
 
 .header p {
@@ -32,24 +32,38 @@ body {
     font-size: 18px;
 }
 
-/* MAIN CONTAINER */
+/* APP MOCKUP */
+.phone {
+    width: 260px;
+    margin: -80px auto 20px auto;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    background: black;
+}
+
+.phone img {
+    width: 100%;
+    display: block;
+}
+
+/* CONTAINER */
 .container {
     max-width: 500px;
-    margin: -40px auto 0 auto;
+    margin: auto;
     padding: 20px;
 }
 
-/* CARD STYLE */
+/* CARD */
 .card {
     background: white;
     padding: 16px;
-    border-radius: 16px;
     margin-bottom: 12px;
+    border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    font-size: 15px;
 }
 
-/* BUTTONS */
+/* BUTTON */
 .button {
     display: block;
     text-align: center;
@@ -60,29 +74,27 @@ body {
     text-decoration: none;
 }
 
-/* DOWNLOAD BUTTON */
+/* DOWNLOAD */
 .download {
     background: #2e7d32;
     color: white;
 }
 
-/* PAYPAL BUTTON */
+/* PAYPAL */
 .paypal {
     background: #ffca28;
     color: black;
 }
 
-/* INFO SECTION */
-.info {
+/* SECTION TITLE */
+h3 {
     margin-top: 30px;
-    font-size: 15px;
-    text-align: center;
 }
 
 /* FOOTER */
 .footer {
-    margin-top: 40px;
     text-align: center;
+    margin-top: 40px;
     font-size: 13px;
     color: #666;
     padding-bottom: 20px;
@@ -99,27 +111,33 @@ body {
     <p>Finde Schützenfeste in deiner Nähe 🎉</p>
 </div>
 
+<!-- APP MOCKUP -->
+<div class="phone">
+    <img src="https://via.placeholder.com/300x600.png?text=App+Screenshot" />
+</div>
+
 <!-- CONTENT -->
 <div class="container">
 
     <div class="card">📍 Events in deiner Nähe</div>
     <div class="card">⭐ Favoriten speichern</div>
-    <div class="card">🚕 Taxi direkt finden</div>
+    <div class="card">🚕 Taxi sofort finden</div>
 
     <!-- DOWNLOAD BUTTON -->
-    <a href="https://apps.apple.com/de/app/sch%C3%BCtzenradar/id6768100350" class="button download">
+    <a href="DEIN_APPSTORE_LINK" class="button download">
         📲 App herunterladen
     </a>
 
-    <!-- PAYPAL BUTTON -->
+    <!-- PAYPAL -->
     <a href="https://paypal.me/SaschaLanghorst" target="_blank" class="button paypal">
         💛 Unterstützen
     </a>
 
     <!-- INFO -->
-    <div class="info">
-        <h3>📢 Für Vereine</h3>
-        <p>Dein Schützenfest fehlt? Wir tragen es kostenlos ein!</p>
+    <h3>📢 Für Vereine</h3>
+    <div class="card">
+        Dein Schützenfest fehlt?<br><br>
+        Wir tragen es kostenlos ein!
     </div>
 
 </div>
