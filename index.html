@@ -34,40 +34,6 @@ body {
     padding: 10px;
 }
 
-/* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* CARD */
-.card {
-    background: white;
-    padding: 12px;
-    border-radius: 12px;
-    font-size: 14px;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
-}
-
-/* HIGHLIGHT */
-.highlight {
-    grid-column: span 2;
-}
-
-@media (max-width: 600px) {
-    .highlight {
-        grid-column: span 1;
-    }
-}
-
 /* BUTTON */
 .button {
     display: inline-block;
@@ -83,7 +49,6 @@ body {
     transform: scale(1.05);
 }
 
-/* COLORS */
 .download {
     background: #2e7d32;
     color: white;
@@ -100,21 +65,54 @@ body {
     margin-top: 15px;
 }
 
-/* SUPPORT */
+/* SUPPORT BOX */
 .support {
     background: #fff3cd;
-    padding: 12px;
+    padding: 14px;
     border-radius: 12px;
-    margin-top: 10px;
+    margin-top: 15px;
     text-align: center;
     font-size: 14px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.highlight {
+    grid-column: span 2;
+}
+
+@media (max-width: 600px) {
+    .highlight {
+        grid-column: span 1;
+    }
 }
 
 /* FOOTER */
 .footer {
     text-align: center;
     font-size: 12px;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 </style>
 
@@ -129,7 +127,43 @@ body {
 
 <div class="container">
 
-<!-- FEATURES -->
+<!-- 💰 SUPPORT DIREKT OBEN -->
+<div class="support">
+    <h3>💛 Unterstütze das Projekt</h3>
+    <p>
+        Wenn dir die App gefällt, kannst du mich unterstützen 🍺
+    </p>
+
+    <a href="https://paypal.me/SaschaLanghorst" class="button paypal" target="_blank">
+        🍺 Bier ausgeben
+    </a>
+</div>
+
+<!-- 📲 DOWNLOAD + TEILEN -->
+<div class="actions">
+
+    <a href="https://apps.apple.com/de/app/sch%C3%BCtzenradar/id6768100350" class="button download">
+        📲 App herunterladen
+    </a>
+
+</div>
+
+<div class="support">
+    <p>
+        📢 Hilf mit, die App bekannt zu machen 🙌<br><br>
+        Teile den Link mit Freunden, Familie oder deinem Verein:
+    </p>
+
+    <p><strong>
+        https://sascha22091994.github.io/schuetzenradar-legal/
+    </strong></p>
+
+    <p>
+        👉 Google Play Version folgt in Kürze 📱
+    </p>
+</div>
+
+<!-- 🔥 FEATURES (JETZT UNTEN) -->
 <div class="grid">
 
     <div class="card">📅 Termine im Überblick</div>
@@ -149,26 +183,6 @@ body {
 
 </div>
 
-<!-- BUTTONS -->
-<div class="actions">
-
-    <a href="https://apps.apple.com/de/app/sch%C3%BCtzenradar/id6768100350" class="button download">
-        📲 App herunterladen
-    </a>
-
-    <a href="https://paypal.me/SaschaLanghorst" class="button paypal" target="_blank">
-        🍺 Bier ausgeben
-    </a>
-
-</div>
-
-<!-- SUPPORT TEXT -->
-<div class="support">
-    Wenn dir die App gefällt und du mich unterstützen möchtest,<br>
-    gib mir einfach ein Bier aus 🍺
-</div>
-
-<!-- FOOTER -->
 <div class="footer">
     © 2026 SchützenRadar
 </div>
